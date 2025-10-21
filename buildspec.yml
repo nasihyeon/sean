@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+    commands:
+      - echo "Installing dependencies..."
+      - chmod +x gradlew
+  build:
+    commands:
+      - echo "Building Spring Boot app without tests..."
+      - ./gradlew clean build -x test
+artifacts:
+  files:
+    - build/libs/*.jar
