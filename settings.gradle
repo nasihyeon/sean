@@ -1,1 +1,3 @@
 rootProject.name = 'sean'
+
+include 'src:test:resources'
